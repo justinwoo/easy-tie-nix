@@ -26,12 +26,12 @@ pkgs.stdenv.mkDerivation rec {
     then
       pkgs.fetchzip
         {
-          url = "https://github.com/scarf-sh/tie/releases/download/20221104/macos-latest.tar.gz";
+          url = "justin.gateway.scarf.sh/easy-tie-nix/macos-latest/20221104.tar.gz";
           sha256 = "bvCJwgq5wRQNNqgGt06FwT8Cs5X+dE6IYQS8FJvjloU=";
         }
     else
       pkgs.fetchzip {
-        url = "https://github.com/scarf-sh/tie/releases/download/20221104/ubuntu-latest.tar.gz";
+        url = "justin.gateway.scarf.sh/easy-tie-nix/ubuntu-latest/20221104.tar.gz";
         sha256 = "CxPNW0Zj0F2vtic5B3w+IbbQVQbI+uyWgzzcFe/OJZo=";
       };
 
