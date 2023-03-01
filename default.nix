@@ -15,9 +15,9 @@ in
 pkgs.stdenv.mkDerivation rec {
   pname = "tie";
 
-  version = "20221104";
+  version = "20230228";
 
-  buildInputs = [ pkgs.gmp  ];
+  buildInputs = [ pkgs.gmp ];
 
   libPath = pkgs.lib.makeLibraryPath buildInputs;
 
@@ -26,13 +26,13 @@ pkgs.stdenv.mkDerivation rec {
     then
       pkgs.fetchzip
         {
-          url = "justin.gateway.scarf.sh/easy-tie-nix/macos-latest/20221104.tar.gz";
-          sha256 = "bvCJwgq5wRQNNqgGt06FwT8Cs5X+dE6IYQS8FJvjloU=";
+          url = "justin.gateway.scarf.sh/easy-tie-nix/macos-latest/20230228.tar.gz";
+          sha256 = "AOhe2ZS7yxBKlItxxtfNlq6k+q5K1bfr8+/uRlZuiV0=";
         }
     else
       pkgs.fetchzip {
-        url = "justin.gateway.scarf.sh/easy-tie-nix/ubuntu-latest/20221104.tar.gz";
-        sha256 = "CxPNW0Zj0F2vtic5B3w+IbbQVQbI+uyWgzzcFe/OJZo=";
+        url = "justin.gateway.scarf.sh/easy-tie-nix/ubuntu-latest/20230228.tar.gz";
+        sha256 = "K5pnNCudvU4ri5bSVTf8H4mwZ2r8k88Ol3P/xfKDN+c=";
       };
 
   dontStrip = true;
