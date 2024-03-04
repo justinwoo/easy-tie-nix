@@ -26,13 +26,13 @@ pkgs.stdenv.mkDerivation rec {
     then
       pkgs.fetchzip
         {
-          url = "justin.gateway.scarf.sh/easy-tie-nix/macos-latest/20221104.tar.gz";
-          sha256 = "bvCJwgq5wRQNNqgGt06FwT8Cs5X+dE6IYQS8FJvjloU=";
+          url = "justin.gateway.scarf.sh/easy-tie-nix/macos-latest/20240305.tar.gz";
+          sha256 = "fxh+9n3MoQMXumbnChNORFuK2XBvzBlPX9u4HQra/ro=";
         }
     else
       pkgs.fetchzip {
-        url = "justin.gateway.scarf.sh/easy-tie-nix/ubuntu-latest/20221104.tar.gz";
-        sha256 = "CxPNW0Zj0F2vtic5B3w+IbbQVQbI+uyWgzzcFe/OJZo=";
+        url = "justin.gateway.scarf.sh/easy-tie-nix/ubuntu-latest/20240305.tar.gz";
+        sha256 = "ExGQq7aDt4pDLcw+eCXbDVBe64jcrXLUmfdo+rHcCkA=";
       };
 
   dontStrip = true;
