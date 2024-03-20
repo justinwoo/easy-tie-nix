@@ -15,11 +15,18 @@ in
 pkgs.stdenv.mkDerivation rec {
   pname = "tie";
 
-  version = "20221104";
+  version = "20240305";
 
   buildInputs = [ pkgs.gmp  ];
 
   libPath = pkgs.lib.makeLibraryPath buildInputs;
+
+  tie-repo = pkgs.fetchFromGitHub {
+    owner= "scarf-sh";
+    repo= "tie";
+    rev= "efcc04057d1c362e4eb89fe7e713f84a8a229cc6";
+    hash= "sha256-9NJ0jFcFUV+4YfwsGzm16ETT+sHG1OkgqgNyD0mpOiY=";
+  };
 
   src =
     if pkgs.stdenv.isDarwin
@@ -46,5 +53,11 @@ pkgs.stdenv.mkDerivation rec {
 
     mkdir -p $out/etc/bash_completion.d/
     $TIE --bash-completion-script $TIE > $out/etc/bash_completion.d/tie-completion.bash
+
+    mkdir -p $out/share
+    cp ${tie-repo}/*template* $out/share
+
+    mkdir -p $out/share/test
+    cp ${tie-repo}/test/golden -r $out/share/test
   '';
 }
