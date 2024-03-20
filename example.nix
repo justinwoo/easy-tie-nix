@@ -6,7 +6,7 @@ import
     {
       owner = "justinwoo";
       repo = "easy-tie-nix";
-      rev = "e92ef16c2ac9964bdb1e27e7eb4b2393ed8a61e0";
-      sha256 = "30U5vdHmxVqn0TMxL0TGXKAUkcvHEqH08K0k6checHQ=";
+      rev = "1646bf9103b83192f2f5b97ffd61c114db0656ed";
+      sha256 = "sha256-1k72I8/cl7PlbE+7fheJw+G30VVunMdeZlbSXJGK1VA=";
     })
 { }
