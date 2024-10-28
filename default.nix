@@ -27,7 +27,7 @@ pkgs.stdenv.mkDerivation rec {
       pkgs.fetchzip
         {
           url = "justin.gateway.scarf.sh/easy-tie-nix/macos-latest/${version}.tar.gz";
-          sha256 = "sha256-+6lauVJdCBOvpZTUDz+GyvbR13GArXS2ALd7W1Qd9S8=";
+          sha256 = "sha256-ooDOLHRXSs0Dh+89Yc0cwE5bt5WstEO8NXL/5rHsXDQ=";
         }
     else
       pkgs.fetchzip {
