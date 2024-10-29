@@ -17,7 +17,13 @@ pkgs.stdenv.mkDerivation rec {
 
   version = "20241028";
 
-  buildInputs = [ pkgs.gmp  ];
+  buildInputs =
+    if pkgs.stdenv.isDarwin
+    then [ ]
+    else [
+      pkgs.stdenv.cc.cc.lib
+      pkgs.gmp
+    ];
 
   libPath = pkgs.lib.makeLibraryPath buildInputs;
 
